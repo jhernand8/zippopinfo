@@ -18,7 +18,7 @@ def add_zip(request):
   retStr = ""
   for zip in zips:
     retStr += populateDataForZip(zip) + "\n\n ---- "
-  return HttpResponse("Success: " + retStr
+  return HttpResponse("Success: " + retStr);
 
 def db(request):
 
