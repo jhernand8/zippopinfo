@@ -7,7 +7,7 @@ class Greeting(models.Model):
 # Census data information type. Contains the key used by the
 # census api and a description of the data for that key.
 class InfoType(models.Model):
-    census_key = models.
+    census_key = models.TextField()
     info_type_id = models.AutoField(primary_key = True)
     description = models.TextField()
 

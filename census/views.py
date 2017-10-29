@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from .models import Greeting
+import os
 
 # Create your views here.
 def index(request):
@@ -18,3 +19,6 @@ def db(request):
 
     return render(request, 'db.html', {'greetings': greetings})
 
+def populateDataForZip(zip):
+    os.environ['CENSUS_API_KEY']
+    return ""
