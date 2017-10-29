@@ -23,10 +23,10 @@ def fetchAndFormCensusInfoForZip(zipcode, statecode, apikey, infotypes):
   # form list of data type keys
   dataKeys = []
   for infoType in infotypes:
-    dataKeys.append(infoType.census_key
+    dataKeys.append(infoType.census_key)
 
-  url = form_url_for_data(dataKeys, zipcode, statecode, apiKey)
-  fulljson = fetch_json(url)
+  dataurl = form_url_for_data(dataKeys, zipcode, statecode, apiKey)
+  fulljson = fetch_json(dataurl)
   # first is an array of index to the keys
   typetoindex = fulljson.get(0)
   # next is the actual data for the zip code
