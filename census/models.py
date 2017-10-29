@@ -17,3 +17,5 @@ class CensusInfo(models.Model):
     census_info_id = models.AutoField(primary_key = True)
     info = models.IntegerField()
     zipCode = models.TextField()
+    state_code = models.IntegerField()
+
