@@ -40,7 +40,7 @@ def fetchAndFormCensusInfoForZip(zipcode, statecode, apikey, infotypes):
     for infoType in infotypes:
       if infoType.census_key == datakey:
         dataInfoType = infoType
-    if dataInfoType not None:
+    if dataInfoType is not None:
       info = CensusInfo(info_type_id = dataInfoType.info_type_id, info = datajson.get(idx, zipCode = zipcode, state_code = statecode)
       returnData.append(info)
   return returnData
