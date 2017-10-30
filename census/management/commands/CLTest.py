@@ -12,6 +12,5 @@ class Command(BaseCommand):
 
     for zip in zips:
       data = censusDataUtils.fetchAndFormCensusInfoForZip(zip, 6, apiKey, infoTypes)
-      
       print str(data.info) + ": " + zip + "\n";
 
