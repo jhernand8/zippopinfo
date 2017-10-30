@@ -34,7 +34,7 @@ def fetchAndFormCensusInfoForZip(zipcode, statecode, apikey, infotypes):
   
   returnData = []
   # match up the data to the data types we requested
-  for idx in range(len(typetoindex):
+  for idx in range(len(typetoindex)):
     datakey = typetoindex[idx]
     dataInfoType = None
     for infoType in infotypes:
