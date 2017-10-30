@@ -26,9 +26,9 @@ def fetchAndFormCensusInfoForZip(zipcode, statecode, apikey, infotypes):
     dataKeys.append(infoType.census_key)
 
   dataurl = form_url_for_data(dataKeys, zipcode, statecode, apikey)
-  print "url:" + dataurl + ":\n"
+  print("url:" + dataurl + ":\n")
   fulljson = fetch_json(dataurl)
-  print "data: " + fulljson + "\n\n\n"
+  print("data: " + fulljson + "\n\n\n")
   # first is an array of index to the keys
   typetoindex = fulljson[0]
   # next is the actual data for the zip code
@@ -42,7 +42,7 @@ def fetchAndFormCensusInfoForZip(zipcode, statecode, apikey, infotypes):
     for infoType in infotypes:
       if infoType.census_key == datakey:
         dataInfoType = infoType
-    print str(idx) + ": " + dataInfoType + ":\n\n"
+    print(str(idx) + ": " + dataInfoType + ":\n\n")
     if dataInfoType is not None:
       info = CensusInfo(info_type_id = dataInfoType.info_type_id, info = int(datajson[idx]), zipCode = zipcode, state_code = statecode)
       returnData.append(info)
