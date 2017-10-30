@@ -2,6 +2,7 @@ from django.core.management.base import BaseCommand, CommandError
 from census import censusDataUtils
 from census.models import InfoType
 from census.models import CensusInfo
+import os
 
 class Command(BaseCommand):
 
