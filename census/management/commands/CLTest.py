@@ -11,6 +11,6 @@ class Command(BaseCommand):
     infoTypes = InfoType.objects.all()
 
     for zip in zips:
+      print ": " + zip + "\n";
       data = censusDataUtils.fetchAndFormCensusInfoForZip(zip, 6, apiKey, infoTypes)
-      print str(data.info) + ": " + zip + "\n";
 
