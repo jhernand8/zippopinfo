@@ -1,11 +1,11 @@
-import urllib2
+from urllib.request import urlopen
 import json
 from census.models import CensusInfo
 from census.models import InfoType
 
 # Returns a json object of the response for the given url.
 def fetch_json(url):
-  return json.load(urllib2.urlopen(url))
+  return json.load(urlopen(url))
 
 # Forms a url to get the census data for the given zip and state
 # for all the given data keys.
