@@ -15,7 +15,7 @@ def form_url_for_data(dataKeys, zipCode, state_code, apiKey):
     commaSepDataKeys += dataKey + ","
   # remove trailing comma
   commaSepDataKeys = commaSepDataKeys[:-1]
-  return "https://api.census.gov/data/2010/sf1?get=" + commaSepDataKeys + "&for=zip%20code%20tabulation%20area:" + zipCode + "&in=state:" + state_code + "&key=" + apiKey;
+  return "https://api.census.gov/data/2010/sf1?get=" + commaSepDataKeys + "&for=zip%20code%20tabulation%20area:" + zipCode + "&in=state:" + str(state_code) + "&key=" + apiKey;
 
 # For the given zip code and state, request the info in info types
 # and form and return CensusInfo objects for them.
