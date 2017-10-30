@@ -35,6 +35,6 @@ def populateDataForZip(zip):
     data = censusDataUtils.fetchAndFormCensusInfoForZip(zip, 6, apiKey, infoTypes)
     retStr = ""
     for d in data:
-      retStr += d.info + ": "
+      retStr += str(d.info) + ": "
       d.save()
     return retStr
